@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cines ACME-Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Pongasn aqui su nombre---------->
+    <style>
+        .movinfo {
+            font-size: small;
+
+        }
+
+        .card {
+            width: 15rem;
+            float: left;
+            margin: 10px;
+        }
+
+        .hero {
+            width: 100%;
+        }
+
+        .review {
+            padding-top: 50px;
+            z-index: 5;
+            background-color: white;
+            transform: translateY(-200px);
+        }
+
+        .comment-text {
+
+            height: 100px;
+        }
+
+        .rating>a {
+            display: inline-block;
+            text-decoration: none;
+            color: #d4bd04;
+            font-size: x-large;
+            margin: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .boton-rotar:hover {
+            animation: rotate-animation 2s infinite;
+        }
+
+        @keyframes rotate-animation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .rating a:hover {
+            color: #ff6a00;
+            animation: rotate-animation 2s infinite, color-change-animation 2s infinite;
+        }
+
+
+        @keyframes color-change-animation {
+            0% {
+                color: #ff6a00;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: #00ff00;
+            }
+
+            75% {
+                color: pink;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .volar:active{
+            transform: translateX(500px);
+            transition-duration: 3s;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cines ACME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Encuentranos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Horarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Log In
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+                            <button class="btn btn-success" type="submit">Ingresa</button>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <button class="btn btn-outline-success" type="submit">regístrate</button>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-inline-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Encuentra tu pelicula..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <img class=" hero img-fluid border rounded-3 mb-4"
+                            src="https://enfoquenoticias.com.mx/wp-content/uploads/2023/02/joker-750x375.jpg">
+                    </div>
+                    <div class="row shadow-lg rounded-5 review">
+                        <div class="col-8">
+                            <h1>The Joker <sm>(2019)</sm>
+                            </h1>
+                            <p>Siempre solo en una multitud, el comediante fallido Arthur Fleck busca conexión mientras
+                                camina por las calles de Gotham City. Arthur usa dos máscaras: la que pinta para su
+                                trabajo diario como payaso y la apariencia que proyecta en un intento inútil de sentir
+                                que es parte del mundo que lo rodea. Aislado, intimidado y despreciado por la sociedad,
+                                Fleck comienza un lento descenso hacia la locura mientras se transforma en el cerebro
+                                criminal conocido como el Guasón.</p>
+
+                            <h3>También podria interesarte</h3>
+
+                            <div class="card">
+                                <img src="https://flxt.tmsimg.com/assets/p838_p_v10_ay.jpg" class="card-img-top"
+                                    alt="poster batman">
+                                <div class="card-body">
+                                    <h5 class="card-title">batman</h5><small>1966</small>
+                                    <p class="card-text text-truncate" style="max-width: 1500px;">Kaaapowie! Holy
+                                        feature film, Batman ... one based on the tongue-in-cheek, campy 1960's
+                                        television series. Watch Batman (Adam West) and Robin (Burt Ward) battle sharks,
+                                        Catwoman, The Joker and The Riddler on the big screen. Can they try to prevent
+                                        the bad guys from taking over the world? With a wham! and a pow! and a zip! ...
+                                        our heroes just might win. </p>
+                                    <a href="#" class="btn btn-primary stretched-link">Explorar</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://flxt.tmsimg.com/NowShowing/2369/2369_as.jpg" class="card-img-top"
+                                    alt="poster batman forever">
+                                <div class="card-body">
+                                    <h5 class="card-title">Batman Forever</h5><small>1992</small>
+                                    <p class="card-text text-truncate" style="max-width: 1500px;">The monstrous Penguin
+                                        (Danny DeVito), who lives in the sewers beneath Gotham, joins up with wicked
+                                        shock-headed businessman Max Shreck (Christopher Walken) to topple the Batman
+                                        (Michael Keaton) once and for all. But when Shreck's timid assistant, Selina
+                                        Kyle (Michelle Pfeiffer), finds out, and Shreck tries to kill her, she is
+                                        transformed into the sexy Catwoman. She teams up with the Penguin and Shreck to
+                                        destroy Batman, but sparks fly unexpectedly when she confronts the caped
+                                        crusader. </p>
+                                    <a href="#" class="btn btn-primary stretched-link">Explorar</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://flxt.tmsimg.com/assets/p11724_p_v10_ac.jpg" class="card-img-top"
+                                    alt="poster batman">
+                                <div class="card-body">
+                                    <h5 class="card-title">Batman</h5><small>1989</small>
+                                    <p class="card-text text-truncate" style="max-width: 1500px;">Having witnessed his
+                                        parents' brutal murder as a child, millionaire philanthropist Bruce Wayne
+                                        (Michael Keaton) fights crime in Gotham City disguised as Batman, a costumed
+                                        hero who strikes fear into the hearts of villains. But when a deformed madman
+                                        who calls himself "The Joker" (Jack Nicholson) seizes control of Gotham's
+                                        criminal underworld, Batman must face his most ruthless nemesis ever while
+                                        protecting both his identity and his love interest, reporter Vicki Vale (Kim
+                                        Basinger). </p>
+                                    <a href="#" class="btn btn-primary stretched-link">Explorar</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-4 movinfo">
+                            <div class="rating estrella">
+                                <h4>Compartenos tu opinion</h4>
+                                <a href="#">1 ★</a>
+                                <a href="#">2 ★</a>
+                                <a href="#">3 ★</a>
+                                <a href="#">4 ★</a>
+                                <a href="#">5 ★</a>
+                                <div class="comment">
+                                    <form action=".">
+                                        <input class="form-control comment-text volar" type="text"
+                                            placeholder="¿Qué te pareció la pelicula?"><br>
+                                        <input class="btn btn btn-primary" type="submit" value="enviar">
+                                        <button class="btn btn-outline-primary boton-rotar">Registrate</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <table class="table movinfo">
+                                <tr>
+                                    <td class="text-end"><span>Rating:</span></td>
+                                    <td class="text-start"><span>R (Disturbing Behavior|Brief Sexual
+                                            Images|Language|Strong Bloody Violence)</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Genre:</span></td>
+                                    <td class="text-start"><span>Crime, Drama</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Original Language:</span></td>
+                                    <td class="text-start"><span>English</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Director:</span></td>
+                                    <td class="text-start"><span>Todd Phillips</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Producer:</span></td>
+                                    <td class="text-start"><span>Todd Phillips, Bradley Cooper, Emma Tillinger
+                                            Koskoff</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Writer:</span></td>
+                                    <td class="text-start"><span>Todd Phillips, Scott Silver</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Release Date (Theaters):</span></td>
+                                    <td class="text-start"><span>Oct 4, 2019 wide</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Release Date (Streaming):</span></td>
+                                    <td class="text-start"><span>Oct 3, 2019</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Box Office (Gross USA):</span></td>
+                                    <td class="text-start"><span>$335.4M</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Runtime:</span></td>
+                                    <td class="text-start"><span>2h 2m</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Distributor:</span></td>
+                                    <td class="text-start"><span>Warner Bros. Pictures</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Sound Mix:</span></td>
+                                    <td class="text-start"><span>Dolby Atmos, Dolby Digital, SDDS, Datasat</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>Aspect Ratio:</span></td>
+                                    <td class="text-start"><span>Flat (1.85:1)</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end"><span>View the collection:</span></td>
+                                    <td class="text-start"><span>Batman</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
